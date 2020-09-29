@@ -1,0 +1,20 @@
+# Common Labels
+labels:
+  app: "hello"
+
+# Ingress Configs
+ingress:
+  enabled: true
+  context: "hello"  
+
+
+# Container Configs
+image:
+  repository: "nithindv/hello"
+replicas: "1"
+healthChecks:
+  enabled: true
+  livenessProbePath: "/hello/health"
+  readinessProbePath: "/hello/health"
+  
+# Additional Container Envs
